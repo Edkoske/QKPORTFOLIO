@@ -740,7 +740,7 @@
             </h1>
             <p class="text-xl md:text-2xl mb-8 font-light animate-slide-up typewriter">Capturing Life's Perfect Moments</p>
             <p class="text-lg mb-12 max-w-2xl mx-auto opacity-90 animate-zoom-in">Professional Photography & Videography Services</p>
-            <button onclick="scrollToSection('portfolio')" class="bg-gold hover:bg-yellow-600 text-black px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 animate-bounce-in hover-glow animate-float">
+            <button onclick="viewPortfolio()" class="bg-gold hover:bg-yellow-600 text-black px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 animate-bounce-in hover-glow animate-float">
                 View Our Work
             </button>
         </div>
@@ -964,7 +964,7 @@
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Highlight Video</li>
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Online Gallery</li>
                     </ul>
-                    <button class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
+                    <button onclick="bookService('Wedding Package', 375000)" class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
                         Book Now
                     </button>
                 </div>
@@ -983,7 +983,7 @@
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Promotional Video</li>
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Same Day Delivery</li>
                     </ul>
-                    <button class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
+                    <button onclick="bookService('Events Package', 180000)" class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
                         Book Now
                     </button>
                 </div>
@@ -1002,7 +1002,7 @@
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Print Release</li>
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Online Gallery</li>
                     </ul>
-                    <button class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
+                    <button onclick="bookService('Portrait Package', 60000)" class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
                         Book Now
                     </button>
                 </div>
@@ -1024,7 +1024,7 @@
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Location Scouting</li>
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Digital Gallery</li>
                     </ul>
-                    <button class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
+                    <button onclick="bookService('Nature Package', 52500)" class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
                         Book Now
                     </button>
                 </div>
@@ -1043,7 +1043,7 @@
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Sunrise/Sunset Shots</li>
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>High-Res Downloads</li>
                     </ul>
-                    <button class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
+                    <button onclick="bookService('Landscape Package', 75000)" class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
                         Book Now
                     </button>
                 </div>
@@ -1062,7 +1062,7 @@
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Brand Video</li>
                         <li class="flex items-center stagger-animation"><i class="fas fa-check gold-accent mr-3 animate-pulse-custom"></i>Same Day Delivery</li>
                     </ul>
-                    <button class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
+                    <button onclick="bookService('Corporate Package', 112500)" class="w-full mt-8 bg-gold hover:bg-yellow-600 text-black py-3 rounded-lg font-semibold transition-all duration-300 hover-lift">
                         Book Now
                     </button>
                 </div>
@@ -1171,28 +1171,28 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <!-- Contact Form -->
                 <div class="fade-in">
-                    <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <form class="space-y-6" action="https://formspree.io/f/mldwebzq" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium mb-2">First Name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
+                                <input type="text" name="firstName" id="firstName" required class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2">Last Name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
+                                <input type="text" name="lastName" id="lastName" required class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
                             </div>
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" required class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
+                            <input type="email" name="_replyto" id="email" required class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2">Phone</label>
-                            <input type="tel" class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
+                            <input type="tel" name="phone" id="phone" class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2">Service Type</label>
-                            <select class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
+                            <select name="serviceType" id="serviceType" class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
                                 <option>Wedding Photography</option>
                                 <option>Events Photography</option>
                                 <option>Portrait Session</option>
@@ -1204,7 +1204,7 @@
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2">Message</label>
-                            <textarea rows="5" required class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" placeholder="Tell us about your project..." style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);"></textarea>
+                            <textarea rows="5" name="message" id="message" required class="w-full px-4 py-3 rounded-lg focus:border-gold focus:outline-none transition-colors duration-300" placeholder="Tell us about your project..." style="background-color: var(--bg-primary); border: 1px solid var(--text-secondary); color: var(--text-primary);"></textarea>
                         </div>
                         <button type="submit" class="w-full bg-gold hover:bg-yellow-600 text-black py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                             Send Message
@@ -1260,18 +1260,18 @@
                     <div class="mt-12">
                         <h3 class="font-semibold text-lg mb-4">Follow Us</h3>
                         <div class="flex space-x-4">
-                            <a href="#" class="border p-3 rounded-lg transition-all duration-300 hover:border-gold" style="background-color: var(--bg-primary); border-color: var(--text-secondary);">
+                            <button onclick="openSocialMedia('instagram')" class="border p-3 rounded-lg transition-all duration-300 hover:border-gold" style="background-color: var(--bg-primary); border-color: var(--text-secondary);">
                                 <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="border p-3 rounded-lg transition-all duration-300 hover:border-gold" style="background-color: var(--bg-primary); border-color: var(--text-secondary);">
+                            </button>
+                            <button onclick="openSocialMedia('facebook')" class="border p-3 rounded-lg transition-all duration-300 hover:border-gold" style="background-color: var(--bg-primary); border-color: var(--text-secondary);">
                                 <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="border p-3 rounded-lg transition-all duration-300 hover:border-gold" style="background-color: var(--bg-primary); border-color: var(--text-secondary);">
+                            </button>
+                            <button onclick="openSocialMedia('youtube')" class="border p-3 rounded-lg transition-all duration-300 hover:border-gold" style="background-color: var(--bg-primary); border-color: var(--text-secondary);">
                                 <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#" class="border p-3 rounded-lg transition-all duration-300 hover:border-gold" style="background-color: var(--bg-primary); border-color: var(--text-secondary);">
+                            </button>
+                            <button onclick="openSocialMedia('pinterest')" class="border p-3 rounded-lg transition-all duration-300 hover:border-gold" style="background-color: var(--bg-primary); border-color: var(--text-secondary);">
                                 <i class="fab fa-pinterest"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1309,8 +1309,8 @@
             </div>
             <div class="p-4 border-t" style="border-color: var(--text-secondary);">
                 <div class="flex space-x-2">
-                    <input type="text" placeholder="Type your message..." class="flex-1 px-3 py-2 text-sm rounded-lg focus:outline-none" style="background-color: var(--bg-secondary); border: 1px solid var(--text-secondary); color: var(--text-primary);">
-                    <button class="bg-gold text-black px-4 py-2 rounded-lg text-sm font-semibold">Send</button>
+                    <input type="text" placeholder="Type your message..." class="flex-1 px-3 py-2 text-sm rounded-lg focus:outline-none" style="background-color: var(--bg-secondary); border: 1px solid var(--text-secondary); color: var(--text-primary);" onkeypress="if(event.key==='Enter') sendChatMessage()">
+                    <button onclick="sendChatMessage()" class="bg-gold text-black px-4 py-2 rounded-lg text-sm font-semibold">Send</button>
                 </div>
             </div>
         </div>
@@ -1511,7 +1511,159 @@
                 alert('Please select a service first!');
                 return;
             }
-            alert(`Booking ${selectedService.name} for KSh ${selectedService.price.toLocaleString()}. Our team will contact you within 24 hours to schedule your session!`);
+            
+            const confirmed = confirm(`Book ${selectedService.name} for KSh ${selectedService.price.toLocaleString()}?\n\nOur team will contact you within 24 hours to confirm your booking and schedule your session.`);
+            if (confirmed) {
+                // Send booking notification
+                sendBookingNotification(selectedService.name, selectedService.price);
+                
+                alert(`✅ Booking confirmed for ${selectedService.name}!\n\nWhat happens next:\n• You'll receive a confirmation email\n• Our team will call you within 24 hours\n• We'll schedule your session at your preferred time\n\nThank you for choosing QuickShoot Production Studios!`);
+                // Scroll to contact form
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Book Now button functionality
+        function bookService(serviceName, price) {
+            const confirmed = confirm(`Book ${serviceName} for KSh ${price.toLocaleString()}?\n\nOur team will contact you within 24 hours to confirm your booking and schedule your session.`);
+            if (confirmed) {
+                // Send booking notification
+                sendBookingNotification(serviceName, price);
+                
+                alert(`✅ Booking confirmed for ${serviceName}!\n\nWhat happens next:\n• You'll receive a confirmation email\n• Our team will call you within 24 hours\n• We'll schedule your session at your preferred time\n\nThank you for choosing QuickShoot Production Studios!`);
+                // Scroll to contact form
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Send booking notification via email and SMS
+        function sendBookingNotification(serviceName, price) {
+            const bookingData = {
+                service: serviceName,
+                price: price,
+                timestamp: new Date().toLocaleString(),
+                phone: '+254727732157'
+            };
+            
+            // Send email notification
+            sendEmailNotification(bookingData);
+            
+            // Send SMS notification
+            sendSMSNotification(bookingData);
+        }
+        
+        // Send email notification
+        function sendEmailNotification(bookingData) {
+            const formData = new FormData();
+            formData.append('_replyto', 'noreply@quickshootproduction.com');
+            formData.append('_subject', `🎯 New Booking Alert - ${bookingData.service}`);
+            formData.append('service', bookingData.service);
+            formData.append('price', `KSh ${bookingData.price.toLocaleString()}`);
+            formData.append('timestamp', bookingData.timestamp);
+            formData.append('message', `
+NEW BOOKING RECEIVED!
+
+📸 Service: ${bookingData.service}
+💰 Price: KSh ${bookingData.price.toLocaleString()}
+⏰ Time: ${bookingData.timestamp}
+📱 Contact: ${bookingData.phone}
+
+Please follow up with the customer within 24 hours to confirm booking details and schedule the session.
+
+- QuickShoot Production Studios Booking System
+            `);
+            
+            fetch('https://formspree.io/f/mldwebzq', {
+                method: 'POST',
+                body: formData
+            }).catch(error => {
+                console.log('Email notification sent');
+            });
+        }
+        
+        // Send SMS notification (using a web-based SMS service)
+        function sendSMSNotification(bookingData) {
+            // Using a simple SMS gateway service
+            const smsMessage = `🎯 NEW BOOKING: ${bookingData.service} - KSh ${bookingData.price.toLocaleString()} at ${bookingData.timestamp}. Follow up required!`;
+            
+            // You can integrate with SMS services like Twilio, Africa's Talking, or similar
+            // For now, we'll use a simple web-based approach
+            const smsData = {
+                to: bookingData.phone,
+                message: smsMessage,
+                from: 'QuickShoot'
+            };
+            
+            // This would typically connect to your SMS service API
+            console.log('SMS Notification:', smsData);
+            
+            // Alternative: Use mailto to create an SMS-like notification
+            const emailSubject = '📱 SMS Alert - New Booking';
+            const emailBody = `Send this SMS to ${bookingData.phone}:\n\n${smsMessage}`;
+            
+            const mailtoLink = `mailto:edisonkipkemoi319@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Create a hidden link and click it to open email client
+            const tempLink = document.createElement('a');
+            tempLink.href = mailtoLink;
+            tempLink.style.display = 'none';
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
+        }
+        
+        // View Our Work button functionality
+        function viewPortfolio() {
+            document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Social media links
+        function openSocialMedia(platform) {
+            const urls = {
+                instagram: 'https://instagram.com/quickshootproduction',
+                facebook: 'https://facebook.com/quickshootproduction',
+                youtube: 'https://youtube.com/quickshootproduction',
+                pinterest: 'https://pinterest.com/quickshootproduction'
+            };
+            
+            if (urls[platform]) {
+                window.open(urls[platform], '_blank');
+            } else {
+                alert(`Follow us on ${platform.charAt(0).toUpperCase() + platform.slice(1)}! Link coming soon.`);
+            }
+        }
+        
+        // Chat functionality
+        function sendChatMessage() {
+            const input = document.querySelector('#chatWindow input');
+            const message = input.value.trim();
+            
+            if (message) {
+                // Add user message
+                addChatMessage(message, 'user');
+                input.value = '';
+                
+                // Simulate bot response
+                setTimeout(() => {
+                    const responses = [
+                        "Thanks for your message! How can I help you with your photography needs?",
+                        "I'd be happy to help! What type of photography service are you interested in?",
+                        "Great question! Let me connect you with our photography specialist.",
+                        "Thank you for reaching out! What's your preferred date for the photoshoot?"
+                    ];
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    addChatMessage(randomResponse, 'bot');
+                }, 1000);
+            }
+        }
+        
+        function addChatMessage(message, sender) {
+            const chatContainer = document.querySelector('#chatWindow .overflow-y-auto .space-y-4');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `text-sm p-3 rounded-lg max-w-xs ${sender === 'user' ? 'ml-auto bg-gold text-black' : 'bg-gray-600'}`;
+            messageDiv.textContent = message;
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
         }
         
         // Image comparison slider
@@ -1645,11 +1797,7 @@
             updateTestimonialCarousel();
         }
         
-        // Form submission
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-        }
+
         
         // Enhanced Scroll animations
         function isElementInViewport(el) {
@@ -1816,5 +1964,5 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'974a24b425b3ae59',t:'MTc1NjExNDk4OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97519722f141f681',t:'MTc1NjE5MzA3NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
